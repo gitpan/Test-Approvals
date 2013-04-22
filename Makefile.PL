@@ -12,11 +12,14 @@ WriteMakefile
                    'File::Spec' => 0,
                    'Storable' => 0,
                    'Modern::Perl' => 0,
+                   'List::Util' => 0,
                    'File::Compare' => 0,
                    'FindBin::Real' => 0,
                    'Test::Builder' => 0,
                    'autodie' => 0,
+                   'List::MoreUtils' => 0,
                    'Moose' => 0,
+                   'Perl6::Slurp' => 0,
                    'Moose::Role' => 0,
                    'Getopt::Euclid' => 0,
                    'English' => 0,
@@ -25,6 +28,7 @@ WriteMakefile
                    'Exporter' => 0,
                    'Carp' => 0,
                    'Test::More' => 0,
+                   'Moose::Util' => 0,
                    'File::Next' => 0,
                    'File::stat' => 0
                  }
