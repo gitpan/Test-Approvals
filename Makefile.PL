@@ -2,6 +2,9 @@
 use ExtUtils::MakeMaker;
 WriteMakefile
 (
+  'test' => {
+              'TESTS' => 't\\*.t t\\Reporters\\*.t'
+            },
   'PL_FILES' => {},
   'INSTALLDIRS' => 'site',
   'NAME' => 'Test::Approvals',
@@ -11,6 +14,7 @@ WriteMakefile
                    'Capture::Tiny' => 0,
                    'File::Spec' => 0,
                    'Storable' => 0,
+                   'File::Touch' => 0,
                    'Modern::Perl' => 0,
                    'List::Util' => 0,
                    'File::Compare' => 0,
