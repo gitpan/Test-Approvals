@@ -34,6 +34,7 @@ WriteMakefile
                    'Test::More' => 0,
                    'Moose::Util' => 0,
                    'File::Next' => 0,
+                   'Win32::Process' => 0,
                    'File::stat' => 0
                  }
 )
