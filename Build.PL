@@ -20,7 +20,8 @@ my $builder = Module::Build->new(
         'Module::Build' => 0,
     },
     build_requires => {
-        'Test::More' => 0,
+        'Test::More'  => 0,
+        'Path::Class' => 0,
     },
     requires => {
         'perl'            => 5.014000,
@@ -28,6 +29,8 @@ my $builder = Module::Build->new(
         'version'         => 0,
         'Capture::Tiny'   => 0,
         'Carp'            => 0,
+        'Cwd'             => 0,
+        'Data::Dumper'    => 0,
         'English'         => 0,
         'Exporter'        => 0,
         'File::stat'      => 0,
@@ -51,17 +54,22 @@ my $builder = Module::Build->new(
     },
     add_to_cleanup => [
         'Test-Approvals-*',
+        'perltidy.LOG',
         '*.bak',
-        'tools/*.bak',
+        'bin/*.bak',
+        'bin/_cmtimes',
+        'bin/_vtimes',
+        'bin/_mtimes',
         't/*.bak',
         't/Reporters/*.bak',
+        't/Reporters/*.received.txt',
         'lib/Test/Approvals/Core/*.bak',
         'lib/Test/Approvals/Namers/*.bak',
         'lib/Test/Approvals/Reporters/*.bak',
         'lib/Test/Approvals/Writers/*.bak',
         'lib/Test/Approvals/*.bak',
         'lib/Test/*.bak',
-    ],    
+    ],
 );
 
 $builder->create_build_script();
